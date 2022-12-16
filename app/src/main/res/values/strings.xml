@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Cashat</string>
+    <string name="lokalise_sdk_token" translatable="false">853efddd20de2b2950444d28e8237b25ece1bd28</string>
+    <string name="lokalise_project_id" translatable="false">54011221637dcb93919bc6.77299186</string>
+    <string name="welcome">أهلا </string>
+    <string name="write_mobile">اكتب رقم موبايلك اللي حابب تسجل بيه على ..</string>
+    <string name="mobile_number">رقم الموبايل</string>
+    <string name="mobile_hint">8765 4321 010</string>
+    <string name="register">تسجيل</string>
+    <string name="checking_mobile">التحقق من رقم موبايلك</string>
+    <string name="pin_sent">بعتنالك كود في رسالة على رقم موبايلك الرسالة المفروض توصلك خلال</string>
+    <string name="seconds">ثانية</string>
+    <string name="confirm">تأكيد</string>
+    <string name="resend_code">إعادة إرسال الكود</string>
+    <string name="try_later">خلصت المحاولات المسموح بها، تقدر تجرب بعد شوية</string>
+    <string name="introduce_yourself">عرفنا عنك أكتر</string>
+    <string name="we_need_your_info">محتاجين المعلومات ده عشان نعرف نبعتلك أكتر عروض تناسبك وتسداحتياجاتك.</string>
+    <string name="dob">تاريخ الميلاد</string>
+    <string name="start_saving">ابدأ توفير</string>
+    <string name="male">ذكر</string>
+    <string name="female">أنثى</string>
+    <string name="gender">النوع</string>
+    <string name="ok">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+    <string name="date">التاريخ</string>
+
+    <string name="mtrl_picker_date_header_title">حدد التاريخ</string>
+    <string name="mtrl_picker_save">@string/confirm</string>
+    <string name="mtrl_picker_confirm" description="Button text to indicate that the widget will save the user's selection [CHAR_LIMIT=16]">@string/ok</string>
+    <string name="mtrl_picker_cancel" description="Button text to indicate that the widget will ignore the user's selection [CHAR_LIMIT=16]">@string/cancel</string>
+<!--    <string name="mtrl_picker_date_header_unselected">التاريخ المختار</string>-->
+    <string name="mtrl_picker_text_input_date_hint">@string/date</string>
+    <string name="mtrl_picker_text_input_year_abbr">ع</string>
+    <string name="mtrl_picker_text_input_month_abbr">شهر</string>
+    <string name="mtrl_picker_text_input_day_abbr">يوم</string>
+    <string name="mtrl_picker_invalid_format_use">استخدم: %1$s</string>
+    <string name="mtrl_picker_invalid_format_example">مثال: %1$s</string>
+</resources>
