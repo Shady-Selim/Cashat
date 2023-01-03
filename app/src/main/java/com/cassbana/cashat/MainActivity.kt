@@ -1,6 +1,7 @@
 package com.cassbana.cashat
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ import com.cassbana.cashat.helper.LtrRtlDarkLightPreviews
 import com.cassbana.cashat.navigation.Routes
 import com.cassbana.cashat.navigation.mainNav
 import com.cassbana.cashat.ui.theme.CassbanaTheme
+import com.lokalise.sdk.LokaliseContextWrapper
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,6 +58,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    /*override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LokaliseContextWrapper.wrap(newBase));
+    }*/
 }
 
 @SuppressLint("UnrememberedMutableState")
