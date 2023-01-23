@@ -45,9 +45,10 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
             .width(260.dp)
     )
     Spacer(modifier = Modifier.height(24.dp))
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp).Reverse) {
         for (i in 1..length) {
             val focusManager = LocalFocusManager.current
+            val focusRequester = remember { FocusRequester() }
             var text by remember { mutableStateOf("") }
             var enabled by remember { mutableStateOf(true) }
             BasicTextField(value = text, onValueChange = {
@@ -63,7 +64,7 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
                     )
                     .height(56.dp)
                     .weight(1f)
-                    .focusRequester(focusRequester = FocusRequester.Default),
+                    .focusRequester(focusRequester = focusRequester),
                 textStyle = TextStyle(textAlign = TextAlign.Center),
                 enabled = enabled,
                 keyboardOptions = KeyboardOptions(
@@ -85,6 +86,9 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
                     }
                 }
             )
+            LaunchedEffect(Unit) {
+                focusRequester.requestFocus()
+            }
         }
     }
     Spacer(modifier = Modifier.height(24.dp))
@@ -118,7 +122,8 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
     }
     Spacer(modifier = Modifier.height(24.dp))
     Button(
-        onClick = { onConfirmClick() },
+        onClick = {
+            onConfirmClick() },
         modifier = Modifier
             .fillMaxWidth()
             .height(48.dp),

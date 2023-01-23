@@ -32,8 +32,7 @@ fun NavGraphBuilder.mainNav(navController: NavHostController) {
         ) {//,deepLinks = Routes.PinCheck.deepLinks
             val otp = it.arguments?.getString(Routes.PinCheck.pinCheckArg)
             otp?.let {
-                PinCheck(it,
-                    onConfirmClick = { navController.navigate("${Routes.GetIntroduced.route}/$it") })
+                PinCheck(onConfirmClick = { navController.navigate("${Routes.GetIntroduced.route}/$it") })
             }
         }
         composable(

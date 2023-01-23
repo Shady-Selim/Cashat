@@ -21,7 +21,7 @@ import java.util.*
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowDatePicker(datePicked: String, updatedDate: (String?) -> Unit) {
-    val mContext = LocalContext.current as AppCompatActivity
+    val mContext = LocalContext.current
     OutlinedTextField(
         value = datePicked,
         onValueChange = {},
@@ -38,7 +38,7 @@ fun ShowDatePicker(datePicked: String, updatedDate: (String?) -> Unit) {
         },
         modifier = Modifier
             .fillMaxWidth()
-            .clickable(onClick = { showDatePicker(mContext, updatedDate) }),
+            .clickable(onClick = { showDatePicker(mContext as AppCompatActivity, updatedDate) }),
         textStyle = CassbanaTheme.typography.paragraph2//TextStyle( color = Neutral8)
     )
 }
