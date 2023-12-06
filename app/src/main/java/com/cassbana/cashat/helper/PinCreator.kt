@@ -45,7 +45,7 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
             .width(260.dp)
     )
     Spacer(modifier = Modifier.height(24.dp))
-    Row(horizontalArrangement = Arrangement.spacedBy(8.dp).Reverse) {
+    Row(horizontalArrangement = Arrangement.spacedBy(2.dp)) {
         for (i in 1..length) {
             val focusManager = LocalFocusManager.current
             val focusRequester = remember { FocusRequester() }
@@ -55,7 +55,7 @@ fun PinCreator(length: Int, onConfirmClick: () -> Unit, list: List<Int>) {
                 text = it
                 otp += it
                 enabled = false
-                if (i < length) focusManager.moveFocus(FocusDirection.Next)
+                focusManager.moveFocus(FocusDirection.Previous)
             },
                 modifier = Modifier
                     .border(
